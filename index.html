@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Realtime Clock</title>
+</head>
+
+<body>
+    <nav id="nav">
+        <h5 class="heading">CLOCK</h5>
+    </nav>
+
+    <!-- analog clock  -->
+    <hr>
+    <div id="clockContainer">
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+    </div>
+    <hr>
+
+    <!-- Realtime digital clock  -->
+    <div id="digitalClock">
+        <div class="digitalTime">
+            <h2>Realtime Clock: <span id="time"></span></h2>
+        </div>
+    </div>
+
+    <!-- alarm clock  -->
+    <center id="alarmClock">
+        <div class="col-md-6 well">
+            <h3>Set Alarm</h3>
+            <hr>
+            <center>
+                <input type="datetime-local" id="alarmTime">
+                <br>
+                <button type="button" onclick="setAlarm(this);" id="alarmButton" class="btn btn-outline-dark my-3"><span
+                        class="glyphicon glyphicon-time"></span> Set Alarm</button>
+            </center>
+            <br>
+            <div id="selectButton" style="display:none;" class="my-3">
+                <center>
+                    <button onclick="snoozeAlarm();" class="btn btn-outline-warning">
+                        <span class="glyphicon glyphicon-pause"></span>Snooze 5 minutes</button>
+                    <button onclick="stopAlarm();" class="btn btn-danger"><span class="glyphicon glyphicon-stop"></span>
+                        Stop Alarm</button>
+                </center>
+            </div>
+        </div>
+    </center>
+
+    <!-- footer -->
+    <footer>
+        <div class="text-center p-3 text-white">
+            © 2021 Copyright:
+            <a style="text-decoration: none; color: black;" target="_blank" href="http://nik-hil.ml">nik-hil.ml</a>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: rgb(235, 234, 232);
+}
+
+#nav {
+  background-image: linear-gradient(rgb(158, 158, 158), rgb(235, 234, 232));
+  padding: 8px;
+}
+
+.heading {
+  font-size: 28px;
+  max-width: 244px;
+  margin: auto;
+  letter-spacing: 33px;
+}
+
+hr {
+  max-width: 320px;
+  margin: auto;
+  height: 2px;
+}
+
+#clockContainer {
+  position: relative;
+  background: url("clock.png");
+  width: 30vw;
+  height: 30vw;
+  background-size: 100%;
+  margin: 12px auto;
+}
+
+#hour,
+#minute,
+#second {
+  position: absolute;
+  background: #000;
+  border-radius: 21px;
+  box-shadow: black 2px 2px 5px;
+  width: 1.5%;
+  left: 47.9%;
+  opacity: 0.5;
+  transform-origin: bottom;
+}
+
+#hour {
+  height: 22%;
+  top: 27%;
+}
+
+#minute {
+  height: 28%;
+  top: 21%;
+}
+
+#second {
+  height: 34%;
+  top: 15%;
+}
+
+#digitalClock {
+  padding: 0 23px;
+}
+
+.digitalTime {
+  border: 2px solid black;
+  border-radius: 12px;
+  max-width: 803px;
+  margin: 21px auto;
+  padding: 12px;
+  text-align: center;
+  line-height: 45px;
+}
+
+#alarmClock {
+  padding: 23px;
+  background-color: rgba(128, 128, 128, 0.555);
+}
+
+#alarmTime {
+  margin-top: 12px;
+  font-size: 18px;
+  padding: 4px 8px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+}
+
+@media only screen and (max-width: 600px) {
+  #clockContainer {
+    width: 60vw;
+    height: 60vw;
+  }
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.555);
+}
